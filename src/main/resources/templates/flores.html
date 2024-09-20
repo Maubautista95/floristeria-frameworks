@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,25 @@
 </head>
 <body>
     <h1>Flores</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nombre</td>
+                <td>Color</td>
+                <td>Precio</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="flor : ${flores}">
+                <td th:text="${flor.id}">ID</td>
+                <td th:text="${flor.nombre}">Nombre</td>
+                <td th:text="${flor.color}">Color</td>
+                <td th:text="${flor.precio}">Precio</td>
+            </tr>
+        </tbody>
+    </table>
     
 </body>
 </html>
