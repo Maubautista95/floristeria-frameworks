@@ -22,4 +22,16 @@ public class FlorService {
 
         return florRepository.save(flor);
     }
+
+    public void deleteById(Long id) {
+        florRepository.deleteById(id);
+    }
+
+    public Flor findById(Long id) {
+        return florRepository.findById(id).orElse(null);
+    }
+
+    public void update(Flor flor) {
+        florRepository.save(flor);
+    }
 }
