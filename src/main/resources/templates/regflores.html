@@ -45,9 +45,30 @@
               <input type="text" id="color" th:field="*{color}" class="form-control"/>
           </div>
           <div class="form-group">
-              <label for="precio">Precio:</label>
-              <input type="number" step="0.01" id="precio" th:field="*{precio}" class="form-control"/>
+              <label for="variedad">variedad:</label>
+              <input id="variedad" th:field="*{variedad}" class="form-control"/>
           </div>
+
+          <div class="form-group">
+            <label for="tipoDeFlor">tipoDeFlor:</label>
+            <input  id="tipoDeFlor" th:field="*{tipoDeFlor}" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" step="1" id="cantidad" th:field="*{cantidad}" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+        <label for="precioDeCompra">Precio de compra:</label>
+        <input type="number" step="1" id="precioDeCompra" th:field="*{precioDeCompra}" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+      <label for="precioDeVenta">Precio de venta:</label>
+      <input type="number" step="1" id="precioDeVenta" th:field="*{precioDeVenta}" class="form-control"/>
+  </div>
+
           <div class="form-group pt-3">
               <button type="submit" class="btn btn-primary">Guardar</button>
           </div>

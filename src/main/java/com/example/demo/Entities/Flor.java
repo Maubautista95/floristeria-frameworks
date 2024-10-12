@@ -20,5 +20,9 @@ public class Flor {
 
     private String nombre;
     private String color;
-    private String precio;
+    private String variedad;
+    private String tipoDeFlor;
+    private Integer cantidad;
+    private Integer precioDeCompra;
+    private Integer precioDeVenta;
 }

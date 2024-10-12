@@ -32,16 +32,37 @@
                     <td>ID</td>
                     <td>Nombre</td>
                     <td>Color</td>
-                    <td>Precio</td>
+                    <td>Variedad</td>
+                    <td>Tipo de Flor</td>
+                    <td>Cantidad</td>
+                    <td>Precio de compra</td>
+                    <td>Precio de venta</td>
                     <td>Acciones</td>
                 </tr>
             </thead>
             <tbody>
+              <!--
+                  private String nombre;
+    private String color;
+    private String variedad;
+    private String tipoDeFlor;
+    private int cantidad;
+    private int precioDeCompra;
+    private int precioDeVenta;
+}
+              
+              -->
                 <tr th:each="flor : ${flores}" style="margin-left: auto; margin-right: auto;">
                     <td th:text="${flor.id}">ID</td>
                     <td th:text="${flor.nombre}">Nombre</td>
                     <td th:text="${flor.color}">Color</td>
-                    <td th:text="${flor.precio}">Precio</td>
+                    <td th:text="${flor.variedad}">variedad</td>
+                    <td th:text="${flor.tipoDeFlor}">tipoDeFlor</td>
+                    <td th:text="${flor.cantidad}">cantidad</td>
+                    <td th:text="${flor.precioDeCompra}">precioDeCompra</td>
+                    <td th:text="${flor.precioDeVenta}">precioDeVenta</td>
+
+
                     <td>
                         <a th:href="@{/flores/eliminar/{id}(id=${flor.id})}" class="btn btn-danger">Eliminar</a>
                     </td>
